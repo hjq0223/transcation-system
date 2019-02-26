@@ -1,0 +1,2 @@
+# transcation-system
+18年6月实验周ssm框架独立开发的简单的校园二手交易系统
