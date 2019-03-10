@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace = "com.ckj.mapper.ItemCustomMapper">
+	<insert id="insertitem" parameterType = "com.ckj.po.Item">
+		INSERT INTO 
+		Item(name,num,description,file,user)
+		VALUES(#{name},#{num},#{description},#{file},#{user})
+	</insert>
+	<select id = "finditems" resultType = "com.ckj.po.Item">
+		SELECT * FROM Item
+	</select>
+	<select id = "selectuseritem" parameterType="java.util.List"  resultType = "com.ckj.po.Item">
+		select *  
+        from item e  
+        where e.id in  
+        <foreach collection="list" item="itemid" index="index"  
+            open="(" close=")" separator=",">  
+            #{itemid}  
+        </foreach>  
+	</select>
+	<update id = "buyitem" parameterType = "int">
+		UPDATE ITEM SET num = num-1 WHERE id = #{id}
+	</update>
+</mapper>

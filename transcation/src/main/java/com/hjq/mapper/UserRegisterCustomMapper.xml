@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ckj.mapper.UserRegisterCustomMapper">
+	<insert id="UserRegist" parameterType="com.ckj.po.User">
+		INSERT INTO
+		userpotential(username,password,passwordcheck,tel,email)
+		VALUES(#{Username},#{Password},#{PasswordCheck},#{Tel},#{Email})
+	</insert>
+	<select id = "loginverifod" parameterType = "com.ckj.po.LoginUser" resultType = "com.ckj.po.LoginUser">
+		SELECT Username FROM userpotential
+		WHERE username = #{username} and password = #{password} 
+	</select>
+</mapper>

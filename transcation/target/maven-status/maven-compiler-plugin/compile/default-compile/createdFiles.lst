@@ -1,0 +1,17 @@
+com\ckj\Controller\Register.class
+com\ckj\po\Item.class
+com\ckj\mapper\ItemCustomMapper.class
+com\ckj\service\imp\UserItemListServiceImpl.class
+com\ckj\Controller\CodeVerfoid.class
+com\ckj\mapper\UserRegisterCustomMapper.class
+com\ckj\Controller\Index.class
+com\ckj\po\User.class
+com\ckj\po\BookInfo.class
+com\ckj\service\imp\UserRegisterCustomServiceImpl.class
+com\ckj\service\ItemCustomService.class
+com\ckj\service\UserItemListService.class
+com\ckj\po\UserItemList.class
+com\ckj\po\LoginUser.class
+com\ckj\service\UserRegisterCustomService.class
+com\ckj\service\imp\ItemCustomServiceImpl.class
+com\ckj\mapper\UserItemListMapper.class
